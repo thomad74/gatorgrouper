@@ -91,8 +91,7 @@ Open the `.json` file in the `gatorgrouper` repository and find the `"client-ema
 Copy the quoted text that looks like an email address. Return to the Sheet and
 open the sharing options.  Paste the address and click send. Alternatively, if
 you would like to create your own service account for confidentiality and
-security, follow the tutorial found at [www.twolio.com](https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html)
-to create a personal service account.
+security, follow the tutorial found at [www.twolio.com](https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html) to create a personal service account.
 
 Within `defaults.py`, update the `DEFAULT_WORKBOOK` constant to the name of your
 Sheet.
