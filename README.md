@@ -71,7 +71,7 @@ your terminal.
 
 ## Initial Setup
 
-Ensure that you have installed gspread and oauth2client installed in the root
+Ensure that you have installed gspread and oauth2client in the root
 directory of the repository. In the terminal use the command:
 
 ```shell
@@ -81,18 +81,17 @@ python3 -m pip install --user gspread oauth2client
 Create a Google Sheets spreadsheet and a Google Form in Google Drive. In the
 Form, create yes or no questions to measure the capabilities and skills of the
 students that you wish to group.  After you have at least one submission of the
-Form, you can go to the responses tab and click on the green icon with the white
-cross through it.  This will enable you to link the Sheet to the Form. You can
-either create a new Sheet or link to a preexisting one. If you need to change
-the destination, you can click on the three dot icon menu to the right of the
-green icon and select "Select response destination".
+form, you can go to the responses tab and click on the green icon with the white
+cross through it.  This will enable you to link the Google Sheet to the Google
+Form. You can either create a new Sheet or link to a preexisting one. If you need 
+to change the destination, you can click on the three dot icon menu to the right 
+of the green icon and select "Select response destination".
 
-Open the `.json` file in the `gatorgrouper` repository and find the `"client-email"`.
+Open the `.json` file in the `gatorgrouper` repository and find `"client-email"`.
 Copy the quoted text that looks like an email address. Return to the Sheet and
 open the sharing options.  Paste the address and click send. Alternatively, if
 you would like to create your own service account for confidentiality and
-security, follow the tutorial found at [www.twolio.com](https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html)
-to create a personal service account.
+security, follow the tutorial found at [www.twolio.com](https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html) to create a personal service account.
 
 Within `defaults.py`, update the `DEFAULT_WORKBOOK` constant to the name of your
 Sheet.
@@ -163,9 +162,9 @@ To group students using the round-robin method, use the flag `--round-robin`.
 python3 gatorgrouper.py --round-robin
 ```
 
-The round-robin method takes the responses from the Sheet into account when
-sorting students into groups.  The yes and no responses from the Sheet are
-represented as true and false.  Round-robin randomizes the categories and
+The round-robin method takes the responses from the Google Sheet into account 
+when sorting students into groups.  The yes and no responses from the sheet 
+are represented as true and false.  Round-robin randomizes the categories and
 assigns a student, one at a time, to each group by using the first value
 indicated as true.  When all of the students with true values are assigned,
 it goes back and adds a student to each group until there are no students
@@ -254,7 +253,7 @@ operating systems that support Python version 3.
 ### Functions Tested
 
 The test suite is designed to test the different functions of `gatorgrouper.py`.
-The first function the test suites test is to make sure that there are the
+The first function the test suite tests is to ensure that there are the
 correct amount of students in each group. The test suite also makes sure that
 the shuffle function is working correctly. There are also test cases to make
 sure that the professor has the option to mark students absent, and these
@@ -356,7 +355,7 @@ after_success:
 
 ## Problems or Praise
 
-If you have any problems with installing or using GatorGrouper, then please
+If you have any problems with installing or using GatorGrouper, please
 create an issue associated with this Git repository using the "Issues" link at
 the top of this site. The contributors to GatorGrouper will do all that they can
 to resolve your issue and ensure that the entire tool works well in your
